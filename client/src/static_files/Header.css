@@ -1,0 +1,11 @@
+nav{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+ui{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+header{
+    justify-content: center;
+}
