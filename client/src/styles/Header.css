@@ -8,18 +8,15 @@
   }
   
   .header-nav {
-    padding:10px ;
     background-color:ghostwhite;
     display: flex;
     justify-content: space-between;
   }
   
 .header-logo {
-  padding-top: 0.1em;
-    margin: 1em;
-    margin-left: 20px;
-    width: 65px;
-    height: 25px;
+  margin: 10px 0 10px 10px;
+    width: 120px;
+    height: 50px;
 }
 
   #nav {
@@ -28,11 +25,13 @@
     list-style-type: none;
     margin:  10px;
     padding: 0;
+    align-items: center;
     
   }
   
   li {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #395a13;
     width: max-content;
     text-align: center;
     padding: 0.5em 1em 0.5em 1em ;
@@ -41,6 +40,8 @@
   
   
   #contactUs{
+    align-items: center;
+    display: flex;
     list-style-type: none;
     margin: 10px;
     padding: 0;

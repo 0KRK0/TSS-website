@@ -7,6 +7,7 @@ const Header = () => {
     <header className="header-container">
       <nav className="header-nav">
       <img src="../../../logo2.png" alt="TSS" className="header-logo" />
+      <span />
         <ul id="nav">
           <li>Home</li>
           <li>About Us</li>
@@ -14,7 +15,10 @@ const Header = () => {
           <li>Careers</li>
           
         </ul>
+        
         <ul id="contactUs">
+          <li>Collab</li>
+          <li>Get Hired!</li>
           <li>Contact Us</li>  
         </ul>
       </nav>
