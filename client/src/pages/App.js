@@ -1,4 +1,4 @@
-import '../static_files/App.css';
+import '../styles/App.css';
 import Header from './Home/Header';
 import Carousel from './Home/Carousel';
 import Careers from './Home/Careers';
