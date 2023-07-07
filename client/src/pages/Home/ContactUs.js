@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = () => {
+const ContactUs = () => {
   return (
     <div id="home-page-contactus">
         
@@ -25,4 +25,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default ContactUs

@@ -1,11 +1,11 @@
 import '../static_files/App.css';
-import Footer from './Footer';
-import Header from './Header';
-import Carousel from './Carousel';
-import Career from './Career';
-import Insight from './Insight';
-import Service from './Service';
-import Form from './Form';
+import Header from './Home/Header';
+import Carousel from './Home/Carousel';
+import Career from './Home/Career';
+import Insight from './Home/Insight';
+import Service from './Home/Services';
+import ContactUs from './Home/ContactUs';
+import Footer from './Home/Footer';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Career />
       <Insight />
       <Service />
-      <Form />
+      <ContactUs />
       <Footer />
     </div>
   );

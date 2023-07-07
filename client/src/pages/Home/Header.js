@@ -1,5 +1,5 @@
 import React from 'react'
-import '../static_files/Header.css';
+import '../../static_files/Header.css';
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
                 <li>About Us</li>
                 <li>Services</li>
                 <li>Careers</li>
-                <li>COntact Us</li>  
+                <li>Contact Us</li>  
             </ui>
             <img src="logo2.1.jpg"  alt="Tech Stalwart Solution"/>
         </nav>
