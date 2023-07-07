@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Career = () => {
+const Careers = () => {
   return (
     <div id="home-page-career">
         <h3>Career</h3>
@@ -27,4 +27,4 @@ const Career = () => {
   )
 }
 
-export default Career
+export default Careers

@@ -1,18 +1,18 @@
 import '../static_files/App.css';
-import Footer from './Footer';
-import Header from './Header';
-import Carousel from './Carousel';
-import Career from './Career';
-import Insight from './Insight';
-import Service from './Service';
-import Form from './Form';
+import Footer from './Home/Footer';
+import Header from './Home/Header';
+import Carousel from './Home/Carousel';
+import Careers from './Home/Careers';
+import Insight from './Home/Insight';
+import Service from './Home/Services';
+import Form from './Home/Form';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Carousel />
-      <Career />
+      <Careers />
       <Insight />
       <Service />
       <Form />
