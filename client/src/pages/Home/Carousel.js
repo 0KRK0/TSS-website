@@ -30,9 +30,9 @@ const Carousel = () => {
                 {/* <!-- button end --> */}
             </div>
             <div id="home-page-scroll">
-                <button></button>
-                <button></button>
-                <button></button>
+                <button> NEXT  </button>
+                <button>||</button>
+                <button>PREVIOUS</button>
             </div>
         </section>
         <div id="home-page-line"></div>
