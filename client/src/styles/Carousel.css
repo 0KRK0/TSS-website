@@ -1,0 +1,60 @@
+.image-slider {
+    width: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 89vh;
+    object-fit: cover;
+  }
+  
+  .prev-button,
+  .next-button {
+    color: white;
+    width: 30;
+    height: inherit;
+    font-size: 30px;
+    position: absolute;
+    right: 1.5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+
+  }
+
+  .prev-button {
+    bottom: 3.5em;
+  }
+  
+  .next-button {
+    bottom: 5em;
+  }
+  
+.prev-button>span:hover,.next-button>span:hover,.pause-button:hover{
+    background-color: black ;
+    opacity: 0.2;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+
+    
+}
+.pause-button {
+    color: white;
+    width: 30;
+    height: inherit;
+    font-size: 30px;
+    position: absolute;
+    right: 1.5em;
+    bottom: 2em;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+
+  }

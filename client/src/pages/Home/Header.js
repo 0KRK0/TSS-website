@@ -12,9 +12,9 @@ const Header = () => {
           <li>About Us</li>
           <li>Services</li>
           <li>Careers</li>
-          
+          <li>Apps</li>
         </ul>
-        <span />
+      <span />
       <span />
         <ul id="contactUs">
           <li>Collab</li>
