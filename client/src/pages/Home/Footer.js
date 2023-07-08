@@ -72,14 +72,14 @@ const Footer = () => {
                             <h3>Useful Links</h3>
                         </div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Expert Team</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Latest News</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">about</a></li>
+                            <li><a href="/">services</a></li>
+                            <li><a href="/">portfolio</a></li>
+                            <li><a href="/">Careers</a></li>
+                            <li><a href="/">Expert Team</a></li>
+                            <li><a href="/">Contact us</a></li>
+                            <li><a href="/">Latest News</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                             <h3>Subscribe</h3>
                         </div>
                         <div class="footer-text mb-25">
-                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            <p>Do not miss to subscribe to our new feeds, kindly fill the form below.</p>
                         </div>
                         <div class="subscribe-form">
                             <form action="#">
@@ -114,11 +114,11 @@ const Footer = () => {
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Terms</a></li>
+                            <li><a href="/">Privacy</a></li>
+                            <li><a href="/">Policy</a></li>
+                            <li><a href="/">Contact</a></li>
                         </ul>
                     </div>
                 </div>
