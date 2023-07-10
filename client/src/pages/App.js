@@ -10,12 +10,12 @@ import ContactUs from './Home/ContactUs/ContactUs';
 function App() {
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
       <Carousel />
       <Careers />
       <Insight />
-      <Services />
-      <Footer /> */}
+      <Service />
+      <Footer />
       <ContactUs />
     </div>
   );
