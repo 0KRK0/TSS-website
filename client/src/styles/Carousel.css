@@ -1,60 +1,81 @@
 .image-slider {
-    width: 100%;
-    position: relative;
-  }
-  
-  .slide {
-    width: 100%;
+  width: 100%;
+  position: relative;
 
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 89vh;
-    object-fit: cover;
-  }
-  
-  .prev-button,
-  .next-button {
-    color: white;
-    width: 30;
-    height: inherit;
-    font-size: 30px;
-    position: absolute;
-    right: 1.5em;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
+}
 
-  }
+.slide {
+  width: 100%;
+  display: flex;
+ 
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f6f4ef;
+}
 
-  .prev-button {
-    bottom: 3.5em;
-  }
-  
-  .next-button {
-    bottom: 5em;
-  }
-  
+.slide img {
+  width: 100%; /* Adjust the width as desired */
+  height: 90vh;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.slide .current-image {
+  margin: 0 5%;
+  transform: scale(1.4);
+  height: 75vh;
+  width: 100%;
+}
+.slide>.prev-image{
+  transform:scale(0.7);
+
+}
+.slide>.next-image{
+  transform:scale(0.7);
+
+}
+
+
+.prev-button,
+.next-button {
+  color: #395a13;
+  width: 30;
+  height: inherit;
+  font-size: 30px;
+  position: absolute;
+  right: 4em;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+
+
+}
+
+.prev-button {
+  bottom: 5em;
+}
+
+.next-button {
+  bottom: 3.5em;
+}
+
 .prev-button>span:hover,.next-button>span:hover,.pause-button:hover{
-    background-color: black ;
-    opacity: 0.2;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-
-    
+  opacity: 0.2;
 }
 .pause-button {
-    color: white;
-    width: 30;
-    height: inherit;
-    font-size: 30px;
-    position: absolute;
-    right: 1.5em;
-    bottom: 2em;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
+  color: #395a13;
+  width: 30;
+  height: 30;
+  font-size: 30px;
+  position: absolute;
+  right: 4em;
+  bottom: 2em;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
 
+}
+.slide:hover{
+  .prev-button>span{
+    color: black;
   }
+}
