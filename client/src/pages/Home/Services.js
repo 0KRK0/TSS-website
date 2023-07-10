@@ -25,8 +25,5 @@ const Services = () => {
   )
 }
 
-<<<<<<< HEAD
 export default Services;
-=======
-export default Services
->>>>>>> 2e65033843949b44c7a8184cefdbf8ed6c57775a
+
