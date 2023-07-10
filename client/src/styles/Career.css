@@ -1,0 +1,44 @@
+#home-page-career{
+    background-color: #f6f4ef;
+}
+
+#home-page-career-scroll {
+    display: flex;
+    background-color: #f6f4ef;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #home-page-career h3{
+    text-align: center;
+    padding-top: 2%;
+  }
+  #home-page-career-scroll button {
+    width: 10em;
+    height: 5em;
+    border-radius: 50%;
+    margin: 10px;
+    border: none;
+    background-color: #ccc;
+  }
+  
+  #home-page-career-scroll button.selected {
+    border:#ccc;
+    background-color: #f5e6e6;
+    width: 10em;
+    height: 6em;
+    border-radius: 50%;
+    margin: 10px;
+    border: black;
+
+  }
+  
+  #home-page-career-scroll div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #home-page-career-scroll div #careers-button:nth-child(even) {
+    color: black;
+    margin-left: 7em;
+  }
