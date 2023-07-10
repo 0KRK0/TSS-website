@@ -1,43 +1,21 @@
-import React from 'react'
+import React from 'react';
+import ImageSlider from './ImageSlider';
+import '../../styles/Carousel.css';
 
 const Carousel = () => {
-  return (
-    // <!-- Section1  -->
-    <div id="home-page-wrap">
-        <section id="home-page-scroll-button-wrap">
-            <div id="home-page-button-wrapper">
-                {/* <!-- image start --> */}
-                <div id="home-page-wrapper-1"> 
-                    <img src="" alt=''/>
-                </div>
-                <div id="home-page-wrapper-2">
-                    <img src="" alt=''/>
-                </div>
-                <div id="home-page-wrapper-3">
-                    <img src="" alt=''/>
-                </div>
-                <div id="home-page-wrapper-4">
-                    <img src=""alt='' />
-                </div>
-                <div id="home-page-wrapper-5">
-                    <img src="" alt="" />
-                </div>
-                {/* <!-- image end --> */}
-                {/* <!-- Read more Button start  --> */}
-                <div id="home-page-button">
-                    <button> Read More </button>
-                </div>
-                {/* <!-- button end --> */}
-            </div>
-            <div id="home-page-scroll">
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-        </section>
-        <div id="home-page-line"></div>
-    </div>
-  )
-}
+  const images = [
+    '../../../1.jpg',
+    '../../../2.jpg',
+    '../../../3.jpg',
+    '../../../4.jpg',
+    '../../../5.jpg',
+  ];
 
-export default Carousel
+  return (
+    <div>
+      <ImageSlider images={images} />
+    </div>
+  );
+};
+
+export default Carousel;
