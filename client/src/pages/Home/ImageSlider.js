@@ -40,6 +40,14 @@ const ImageSlider = ({ images }) => {
     }
     resetTimer();
   };
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  }
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  }
+
   useEffect(() => {
     if (!isPaused) {
       startTimer();
@@ -53,7 +61,7 @@ const ImageSlider = ({ images }) => {
   }, [isPaused, startTimer]);
 
   return (
-    <div className="image-slider">
+    <div className="image-slider" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="slide">
         <img className='prev-image' onClick={togglePause} src={images[(currentIndex + images.length - 1) % images.length]} alt={`Slide ${currentIndex - 1}`} />
         <img className="current-image" onClick={togglePause} src={images[currentIndex]} alt={`Slide ${currentIndex}`} />

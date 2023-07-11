@@ -46,7 +46,7 @@ const Footer = () => {
                             <div className="col-xl-4 col-lg-4 mb-50">
                                 <div className="footer-widget">
                                     <div className="footer-logo">
-                                        <a href="index.html"><img src="../../../logo.png" className="img-fluid" alt="logo" /></a>
+                                        <a href="index.html"><img src="../../../logo2.png" className="img-fluid" alt="logo" /></a>
                                     </div>
 
                                     <div className="footer-social-icon">
