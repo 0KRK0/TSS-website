@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <header className="header-container">
       <nav className="header-nav">
-      <img src="../../../logo2.png" alt="TSS" className="header-logo" />
-      
+        <img src="../../../logo2.png" alt="TSS" className="header-logo" />
+
         <ul id="nav">
           <li>Home</li>
           <li>About Us</li>
@@ -14,12 +14,12 @@ const Header = () => {
           <li>Careers</li>
           <li>Apps</li>
         </ul>
-      <span />
-      <span />
+        <span />
+        <span />
         <ul id="contactUs">
           <li>Collab</li>
           <li>Get Hired!</li>
-          <li>Contact Us</li>  
+          <li>Contact Us</li>
         </ul>
       </nav>
       <div>
