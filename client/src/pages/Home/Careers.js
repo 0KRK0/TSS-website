@@ -1,97 +1,75 @@
 import React, { useState } from 'react';
+import frontendImg from '../../images/frontend.jpg';
+import backendImg from '../../images/backend.jpg';
+import fullstackImg from '../../images/fullstack.jpg';
+import uiuxImg from '../../images/uiux.png';
+import Seemore from '../../images/Seemore.png';
 import '../../styles/Career.css';
 
 const Careers = () => {
+  const [selectedCareer, setSelectedCareer] = useState('Front-end Development');
 
-  const jobOptions = [
-    'Front-end Development',
-    'Back-end Development',
-    'Full-stack Development',
-    'UI/UX Design'
-  ];
-
-  const [selectedJob, setSelectedJob] = useState(jobOptions[0]);
-
-  const handleJobSelection = (job) => {
-    setSelectedJob(job);
-  };
-  const nextJob = () => {
-    const currentIndex = jobOptions.indexOf(selectedJob);
-    const nextIndex = (currentIndex + 1) % jobOptions.length;
-    setSelectedJob(jobOptions[nextIndex]);
-  };
-  const previousJob = () => {
-    const currentIndex = jobOptions.indexOf(selectedJob);
-    const previousIndex = (currentIndex - 1 + jobOptions.length) % jobOptions.length;
-    setSelectedJob(jobOptions[previousIndex]);
+  const removeDefault = () => {
+    setSelectedCareer('');
   };
 
+  const regainDefault = () => {
+    setSelectedCareer('Front-end Development');
+  };
+
+  const getJobImage = (job) => {
+    switch (job) {
+      case 'Front-end Development':
+        return frontendImg;
+      case 'Back-end Development':
+        return backendImg;
+      case 'Full-stack Development':
+        return fullstackImg;
+      case 'UI/UX Design':
+        return uiuxImg;
+      case 'See-More':
+        return Seemore;
+      default:
+        return null;
+    }
+  };
 
   return (
-    <div id="home-page-career">
-      <h3>Career</h3>
-      <div id="home-page-career-scroll">
-        <div>
-          {/* career options */}
-          {jobOptions.map((job) => (
-            <button id="careers-button"
-              key={job}
-              onClick={() => handleJobSelection(job)}
-              className={selectedJob === job ? 'selected' : ''}
-            >
-              {job}
-            </button>
-          ))}
+    <div className='career-part'>
+      <h3>Careers</h3>
+      <div className='career-id' onMouseLeave={regainDefault}>
+        <div className={`c ${selectedCareer === 'Front-end Development' ? 'expanded' : ''}`}>
+          <span>Front-end Development</span><button>See More-{'>'}</button>
+          <img src={getJobImage('Front-end Development')} alt='Front-end Development' />
+
         </div>
-        <div>
-          <article id="home-about-career">
-            {/* about selected career */}
-            {selectedJob && (
-              <>
-                <h4>About {selectedJob}</h4>
-                <p>
-                  {selectedJob === 'Front-end Development' && (
-                    <>
-                      Front-end developers are responsible for implementing
-                      visual and interactive elements in a web application. They
-                      work closely with designers to turn design mockups into
-                      functional user interfaces using HTML, CSS, and
-                      JavaScript.
-                    </>
-                  )}
-                  {selectedJob === 'Back-end Development' && (
-                    <>
-                      Back-end developers handle the server-side logic and
-                      database interactions of a web application. They are
-                      responsible for building the behind-the-scenes systems
-                      and APIs that power the application's functionality.
-                    </>
-                  )}
-                  {selectedJob === 'Full-stack Development' && (
-                    <>
-                      Full-stack developers are proficient in both front-end and
-                      back-end development. They can handle all aspects of
-                      building a web application, from designing the user
-                      interface to implementing the server-side logic.
-                    </>
-                  )}
-                  {selectedJob === 'UI/UX Design' && (
-                    <>
-                      UI/UX designers focus on creating intuitive and visually
-                      appealing user interfaces. They conduct user research,
-                      create wireframes and prototypes, and collaborate with
-                      developers to ensure a seamless user experience.
-                    </>
-                  )}
-                </p>
-              </>
-            )}
-          </article>
-          <img src="" alt="" />
+        <div
+          onMouseEnter={removeDefault}
+          className={`c ${selectedCareer === 'Back-end Development' ? 'expanded' : ''}`}
+        ><span>Back-end Development</span><button>See More-{'>'}</button>
+          <img src={getJobImage('Back-end Development')} alt='Back-end Development' />
+
         </div>
-        <div id='nxt-prev-button'>
-          <button onClick={nextJob}>Next</button>
-          <button onClick={previousJob}>Previous</button>
+        <div
+          onMouseEnter={removeDefault}
+          className={`c ${selectedCareer === 'Full-stack Development' ? 'expanded' : ''}`}
+        ><span>Full-stack Development</span><button>See More-{'>'}</button>
+          <img src={getJobImage('Full-stack Development')} alt='Full-stack Development' />
+
+        </div>
+        <div
+          onMouseEnter={removeDefault}
+          className={`c ${selectedCareer === 'UI/UX Design' ? 'expanded' : ''}`}
+        ><span>UI/UX Design</span><button>See More-{'>'}</button>
+          <img src={getJobImage('UI/UX Design')} alt='UI/UX Design' />
+
+        </div>
+        <div
+          onMouseEnter={removeDefault}
+          className={`c ${selectedCareer === 'See-More' ? 'expanded' : ''}`}
+        ><span>Others</span><button>See More-{'>'}</button>
+          <img src={getJobImage('See-More')} alt='See-More' />
+
         </div>
       </div>
     </div>
