@@ -3,15 +3,15 @@
     justify-content: center;
 }
 
-/* @keyframes scroll {
+@keyframes scroll {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(calc(-250px*3));
     }
-} */
+}
 
 .scroller {
     padding-top: 30px;
@@ -27,8 +27,8 @@
 .scroller .scroll-track {
     animation: scroll 20s linear infinite;
     display: flex;
-    justify-content: space-evenly;
-
+    /* justify-content: space-evenly; */
+    width: calc(250px*6);
 }
 
 .scroller .scroll {
