@@ -29,7 +29,7 @@
 
 }
 
-li {
+#nav li,#contactUs li {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #395a13;
   width: max-content;
@@ -55,12 +55,28 @@ li {
   }
 }
 
-li:hover {
+#nav li:hover {
+  height: 40px;
+
+}
+#contactUs li:hover {
   height: 40px;
 
 }
 
-li::after {
+
+#nav li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #395a13;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+#contactUs>li::after{
   content: '';
   position: absolute;
   bottom: 0;
@@ -72,6 +88,15 @@ li::after {
   transition: transform 0.3s ease-in-out;
 }
 
-li:hover::after {
+#contactUs>li:hover::after {
+  transform: scaleX(1);
+}
+#contactUs:hover::after{
+  transform: scaleX(1);
+}
+#nav>li:hover::after {
+  transform: scaleX(1);
+}
+#nav:hover::after{
   transform: scaleX(1);
 }
