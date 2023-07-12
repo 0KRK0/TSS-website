@@ -6,6 +6,7 @@ import Careers from './Home/Careers';
 import Service from './Home/Services';
 import Process from './Home/Process';
 import Partners from './Home/Partners';
+import Policy from './Policy/policies'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Partners />
       <Careers />
       <Process />
+      <Policy />
       <Service />
       <Footer />
     </div>
