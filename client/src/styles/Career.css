@@ -1,18 +1,24 @@
-.career-part{
+.career-part {
   background-color: #f4f6ef;
   padding: 1em;
 }
-.career-part h3{
+
+.career-part h3 {
   margin-left: 1em;
   padding-top: 1.25em;
 }
+
 .career-id {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0;
 }
 
 .c {
-  position: relative; /* Add relative positioning to the .c elements */
+  position: relative;
+  /* Add relative positioning to the .c elements */
+  display: inline-block;
   color: white;
   text-align: center;
   width: 20em;
@@ -24,16 +30,25 @@
 
 .c:hover {
   width: 35em;
+  transform: scale(1.06);
 }
 
 .expanded {
   width: 35em;
 }
 
-.career-id img {
+.career-id .careers {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.c {
+  border-radius: 5%;
+}
+
+.careers {
+  border-radius: 5%;
 }
 
 .career-id span {
@@ -41,20 +56,27 @@
   top: 5%;
   left: 5%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2); /* Add background color with opacity */
-  padding: 0.3em; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Add background color with opacity */
+  padding: 0.3em;
+  /* Adjust padding as needed */
   border-radius: 5%;
 }
-.career-id .c:hover span,.career-id .c:hover button {
+
+.career-id .c:hover span,
+.career-id .c:hover button {
 
   z-index: 2;
 }
+
 .career-id button {
   position: absolute;
   bottom: 5%;
   right: 5%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2); /* Add background color with opacity */
-  padding: 0.3em; /* Adjust padding as needed */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Add background color with opacity */
+  padding: 0.3em;
+  /* Adjust padding as needed */
   border-radius: 5%;
 }
