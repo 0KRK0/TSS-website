@@ -4,6 +4,7 @@ import Header from './Home/Header';
 import Carousel from './Home/Carousel';
 import Careers from './Home/Careers';
 import Service from './Home/Services';
+import Process from './Home/Process';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Carousel />
       <Careers />
+      <Process />
       <Service />
       <Footer />
     </div>
