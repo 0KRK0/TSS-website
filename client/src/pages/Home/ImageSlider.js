@@ -61,11 +61,11 @@ const ImageSlider = ({ images }) => {
   }, [isPaused, startTimer]);
 
   return (
-    <div className="image-slider" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="image-slider" >
       <div className="slide">
         <div className='slide-overlay'></div>
         <img className='prev-image' onClick={togglePause} src={images[(currentIndex + images.length - 1) % images.length]} alt={`Slide ${currentIndex - 1}`} />
-        <img className="current-image" onClick={togglePause} src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
+        <img className="current-image" onClick={togglePause} src={images[currentIndex]} alt={`Slide ${currentIndex}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
         <img className='next-image' onClick={togglePause} src={images[(currentIndex + 1) % images.length]} alt={`Slide ${currentIndex + 1}`} />
       </div>
       <button className="prev-button" onClick={handlePrevSlide}>
