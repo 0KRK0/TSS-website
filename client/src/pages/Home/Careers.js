@@ -40,8 +40,8 @@ const Careers = () => {
       <div className='career-id' onMouseLeave={regainDefault}>
         <div className={`c ${selectedCareer === 'Front-end Development' ? 'expanded' : ''}`}>
           <span>Front-end Development</span><button>See More-{'>'}</button>
+          <div className='overlay'></div>
           <img className='careers' src={getJobImage('Front-end Development')} alt='Front-end Development' />
-
         </div>
         <div
           onMouseEnter={removeDefault}
