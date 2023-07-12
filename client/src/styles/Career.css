@@ -21,7 +21,7 @@
   color: white;
   text-align: center;
   width: 20em;
-  height: 25em;
+  height: 22.5em;
   background-color: black;
   margin: 0 0.5em;
   transition: width 0.3s ease, transform 0.3s;
@@ -71,10 +71,12 @@
 }
 
 .career-id .c:hover span,
-.career-id .c:hover button,
-.career-id .c:hover div {
-
+.career-id .c:hover button {
   z-index: 2;
+}
+
+.career-id .c:hover .overlay {
+  z-index: 1;
 }
 
 .career-id button {
@@ -86,10 +88,22 @@
   color: #f4f6ef;
   padding: 0.3em;
   border-radius: 10%;
+  font-weight: 500;
+  transition: transform 0.3s ease-out;
+}
+
+.career-id button:hover {
+  transform: scale(1.1);
 }
 
 .overlay {
   position: absolute;
-  background-color: #212121;
-  /* opacity: 0.6; */
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button>svg {
+  transform: scale(1.3)
 }

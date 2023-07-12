@@ -3,43 +3,43 @@ import '../../styles/Partners.css'
 const Partners = () => {
     return (
         <div className='body'>
-            <div class="scroller">
-                <div class="scroll-track">
-                    <div class="scroll">
+            <div className="scroller">
+                <div className="scroll-track">
+                    <div className="scroll">
                         <img id='wipro' src="../../../Wipro_Primary Logo_Color_RGB.svg" alt="" />
                     </div>
 
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='virtusa' src="../../../virtusa-corporation.webp" alt="" />
                     </div>
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='quess' src="../../../Quess_Logo.png" alt="" />
                     </div>
 
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='1point1' src="../../../1point1.jpg" alt="" />
                     </div>
-                    {/* <div class="scroll">
+                    {/* <div className="scroll">
                         <img className='partner' src="../../../techno.jpeg"alt="" />
                     </div> */}
                 </div>
 
-                <div class="scroll-track">
-                    <div class="scroll">
+                <div className="scroll-track">
+                    <div className="scroll">
                         <img id='wipro' src="../../../Wipro_Primary Logo_Color_RGB.svg" alt="" />
                     </div>
 
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='virtusa' src="../../../virtusa-corporation.webp" alt="" />
                     </div>
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='quess' src="../../../Quess_Logo.png" alt="" />
                     </div>
 
-                    <div class="scroll">
+                    <div className="scroll">
                         <img id='1point1' src="../../../1point1.jpg" alt="" />
                     </div>
-                    {/* <div class="scroll">
+                    {/* <div className="scroll">
                         <img className='partner' src="../../../techno.jpeg"alt="" />
                     </div> */}
                 </div>
