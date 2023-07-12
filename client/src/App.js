@@ -5,6 +5,7 @@ import Carousel from './pages/Home/Carousel';
 import Careers from './pages/Home/Careers';
 import Service from './pages/Home/Services';
 import Partners from './pages/Home/Partners';
+import Policy from './pages/Policy/policies';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Partners />
       <Careers />
       <Service />
+      <Policy />
       <Footer />
     </div>
   );
