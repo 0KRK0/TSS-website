@@ -7,6 +7,7 @@ import Service from './Home/Services';
 import Process from './Home/Process';
 import Partners from './Home/Partners';
 
+
 function App() {
   return (
     <div className="App">

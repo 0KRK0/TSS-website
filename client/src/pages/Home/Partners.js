@@ -19,9 +19,12 @@ const Partners = () => {
                     <div className="scroll">
                         <img id='1point1' src="../../../1point1.jpg" alt="" />
                     </div>
-                    {/* <div class="scroll">
+                    {/* <div className="scroll">
                         <img className='partner' src="../../../techno.jpeg"alt="" />
                     </div> */}
+                </div>
+
+                <div className="scroll-track">
                     <div className="scroll">
                         <img id='wipro' src="../../../Wipro_Primary Logo_Color_RGB.svg" alt="" />
                     </div>
@@ -36,7 +39,7 @@ const Partners = () => {
                     <div className="scroll">
                         <img id='1point1' src="../../../1point1.jpg" alt="" />
                     </div>
-                    {/* <div class="scroll">
+                    {/* <div className="scroll">
                         <img className='partner' src="../../../techno.jpeg"alt="" />
                     </div> */}
                     </div>

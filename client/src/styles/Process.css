@@ -1,9 +1,9 @@
-.process{
+.process {
     padding-top: 2em;
     display: flex;
     flex-direction: row-reverse;
     background-color: #f4f6ef;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .about-process{
     user-select: none;
@@ -11,16 +11,18 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 35%;
     display: flex;
     flex-direction: column;
-    
+
 }
-.about-process h3{
+
+.about-process h3 {
     text-align: center;
     color: darkgreen;
     margin-bottom: 1em;
 
     font-size: 2.5em;
 }
-.about-process div{
+
+.about-process div {
     justify-content: center;
     background-color: rgb(210, 241, 231);
     padding: 1em;
@@ -28,9 +30,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 70%;
     height: 70%;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
-   
+
 }
-.process-shape{
+
+.process-shape {
     width: 65%;
 }
 
@@ -38,7 +41,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.75em;
 
 }
-.about-process div p{
+
+.about-process div p {
     margin-top: 1em;
 }
 .process-shape circle {
@@ -48,4 +52,20 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .process-shape circle.selected {
     fill: red;
   }
+  
+  .process-shape path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: pathReveal 3s ease-in-out forwards;
+  }
+  
+  @keyframes pathReveal {
+    0% {
+      stroke-dashoffset: 1500;
+   
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+    }}  
   

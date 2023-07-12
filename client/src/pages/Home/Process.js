@@ -25,7 +25,6 @@ const Process = () => {
 
     return processData[processName] || 'No data available for this process.';
   };
-
   return (
     <div className='process'>
       <div className='about-process'>
