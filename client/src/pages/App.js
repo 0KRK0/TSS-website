@@ -5,12 +5,14 @@ import Carousel from './Home/Carousel';
 import Careers from './Home/Careers';
 import Service from './Home/Services';
 import Process from './Home/Process';
+import Partners from './Home/Partners';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Carousel />
+      <Partners />
       <Careers />
       <Process />
       <Service />

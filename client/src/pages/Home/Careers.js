@@ -40,36 +40,36 @@ const Careers = () => {
       <div className='career-id' onMouseLeave={regainDefault}>
         <div className={`c ${selectedCareer === 'Front-end Development' ? 'expanded' : ''}`}>
           <span>Front-end Development</span><button>See More-{'>'}</button>
-          <img src={getJobImage('Front-end Development')} alt='Front-end Development' />
-          
+          <div className='overlay'></div>
+          <img className='careers' src={getJobImage('Front-end Development')} alt='Front-end Development' />
         </div>
         <div
           onMouseEnter={removeDefault}
           className={`c ${selectedCareer === 'Back-end Development' ? 'expanded' : ''}`}
         ><span>Back-end Development</span><button>See More-{'>'}</button>
-          <img src={getJobImage('Back-end Development')} alt='Back-end Development' />
-          
+          <img className='careers' src={getJobImage('Back-end Development')} alt='Back-end Development' />
+
         </div>
         <div
           onMouseEnter={removeDefault}
           className={`c ${selectedCareer === 'Full-stack Development' ? 'expanded' : ''}`}
         ><span>Full-stack Development</span><button>See More-{'>'}</button>
-          <img src={getJobImage('Full-stack Development')} alt='Full-stack Development' />
-          
+          <img className='careers' src={getJobImage('Full-stack Development')} alt='Full-stack Development' />
+
         </div>
         <div
           onMouseEnter={removeDefault}
           className={`c ${selectedCareer === 'UI/UX Design' ? 'expanded' : ''}`}
         ><span>UI/UX Design</span><button>See More-{'>'}</button>
-          <img src={getJobImage('UI/UX Design')} alt='UI/UX Design' />
-         
+          <img className='careers' src={getJobImage('UI/UX Design')} alt='UI/UX Design' />
+
         </div>
         <div
           onMouseEnter={removeDefault}
           className={`c ${selectedCareer === 'See-More' ? 'expanded' : ''}`}
         ><span>Others</span><button>See More-{'>'}</button>
-          <img src={getJobImage('See-More')} alt='See-More' />
-         
+          <img className='careers' src={getJobImage('See-More')} alt='See-More' />
+
         </div>
       </div>
     </div>
