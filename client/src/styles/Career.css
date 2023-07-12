@@ -1,44 +1,82 @@
-#home-page-career{
-    background-color: #f6f4ef;
+.career-part {
+  background-color: #f4f6ef;
+  padding: 1em;
 }
 
-#home-page-career-scroll {
-    display: flex;
-    background-color: #f6f4ef;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #home-page-career h3{
-    text-align: center;
-    padding-top: 2%;
-  }
-  #home-page-career-scroll button {
-    width: 10em;
-    height: 5em;
-    border-radius: 50%;
-    margin: 10px;
-    border: none;
-    background-color: #ccc;
-  }
-  
-  #home-page-career-scroll button.selected {
-    border:#ccc;
-    background-color: #f5e6e6;
-    width: 10em;
-    height: 6em;
-    border-radius: 50%;
-    margin: 10px;
-    border: black;
+.career-part h3 {
+  margin-left: 1em;
+  padding-top: 1.25em;
+}
 
-  }
-  
-  #home-page-career-scroll div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #home-page-career-scroll div #careers-button:nth-child(even) {
-    color: black;
-    margin-left: 7em;
-  }
+.career-id {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.c {
+  position: relative;
+  /* Add relative positioning to the .c elements */
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 20em;
+  height: 25em;
+  background-color: black;
+  margin: 0 0.5em;
+  transition: width 0.3s ease;
+}
+
+.c:hover {
+  width: 35em;
+  transform: scale(1.06);
+}
+
+.expanded {
+  width: 35em;
+}
+
+.career-id .careers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c {
+  border-radius: 5%;
+}
+
+.careers {
+  border-radius: 5%;
+}
+
+.career-id span {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Add background color with opacity */
+  padding: 0.3em;
+  /* Adjust padding as needed */
+  border-radius: 5%;
+}
+
+.career-id .c:hover span,
+.career-id .c:hover button {
+
+  z-index: 2;
+}
+
+.career-id button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Add background color with opacity */
+  padding: 0.3em;
+  /* Adjust padding as needed */
+  border-radius: 5%;
+}
