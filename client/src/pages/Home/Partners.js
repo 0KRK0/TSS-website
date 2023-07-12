@@ -44,6 +44,7 @@ const Partners = () => {
                     </div> */}
                 </div>
 
+
             </div>
         </div>
 

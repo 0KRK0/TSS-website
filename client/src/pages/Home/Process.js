@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import '../../styles/Process.css'
+import '../../styles/Process.css';
 
 const Process = () => {
   const [selectedProcess, setSelectedProcess] = useState('Job Apply');
 
-  const handleClick = (processName) => {
-    setSelectedProcess(processName);
+  const handleClick = () => {
+    const processNames = ['Job Apply', 'Review', 'Selection', 'Interview', 'Selection-End'];
+    const currentIndex = processNames.indexOf(selectedProcess);
+    const nextIndex = (currentIndex + 1) % processNames.length;
+    const nextProcess = processNames[nextIndex];
+    setSelectedProcess(nextProcess);
   };
 
   const getProcessData = (processName) => {
@@ -21,21 +25,18 @@ const Process = () => {
 
     return processData[processName] || 'No data available for this process.';
   };
-  const NextStage = (processName, processData) => {
-
-  }
   return (
     <div className='process'>
       <div className='about-process'>
-        <h3>How To Get Started ?</h3>
-        <div onClick={NextStage}>
+        <h3>How To Get Started?</h3>
+        <div onClick={handleClick}>
           <label>{selectedProcess}</label>
           <article>Stage: {selectedProcess}</article>
           <p>{getProcessData(selectedProcess)}</p>
         </div>
       </div>
       <div className='process-shape'>
-        <svg width='100%' height="500">
+        <svg width='100%' height='500'>
           <path
             d="M70,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400 H900"
             fill="none"
@@ -47,9 +48,9 @@ const Process = () => {
             <circle
               cx="300"
               cy="100"
-              r="8"
+              r={selectedProcess === 'Job Apply' ? '10' : '8'}
               fill={selectedProcess === 'Job Apply' ? 'red' : 'skyblue'}
-              onClick={() => handleClick('Job Apply')}
+              onClick={() => setSelectedProcess('Job Apply')}
             />
           </g>
           <g>
@@ -57,9 +58,9 @@ const Process = () => {
             <circle
               cx="875"
               cy="175"
-              r="8"
+              r={selectedProcess === 'Review' ? '10' : '8'}
               fill={selectedProcess === 'Review' ? 'red' : 'skyblue'}
-              onClick={() => handleClick('Review')}
+              onClick={() => setSelectedProcess('Review')}
             />
           </g>
           <g>
@@ -67,9 +68,9 @@ const Process = () => {
             <circle
               cx="500"
               cy="250"
-              r="8"
+              r={selectedProcess === 'Selection' ? '10' : '8'}
               fill={selectedProcess === 'Selection' ? 'red' : 'skyblue'}
-              onClick={() => handleClick('Selection')}
+              onClick={() => setSelectedProcess('Selection')}
             />
           </g>
           <g>
@@ -77,9 +78,9 @@ const Process = () => {
             <circle
               cx="75"
               cy="325"
-              r="8"
+              r={selectedProcess === 'Interview' ? '10' : '8'}
               fill={selectedProcess === 'Interview' ? 'red' : 'skyblue'}
-              onClick={() => handleClick('Interview')}
+              onClick={() => setSelectedProcess('Interview')}
             />
           </g>
           <g>
@@ -87,9 +88,9 @@ const Process = () => {
             <circle
               cx="800"
               cy="400"
-              r="8"
+              r={selectedProcess === 'Selection-End' ? '10' : '8'}
               fill={selectedProcess === 'Selection-End' ? 'red' : 'skyblue'}
-              onClick={() => handleClick('Selection-End')}
+              onClick={() => setSelectedProcess('Selection-End')}
             />
           </g>
         </svg>

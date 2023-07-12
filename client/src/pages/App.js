@@ -4,8 +4,8 @@ import Header from './Home/Header';
 import Carousel from './Home/Carousel';
 import Careers from './Home/Careers';
 import Service from './Home/Services';
-import Partners from './Home/Partners';
 import Process from './Home/Process';
+import Partners from './Home/Partners';
 
 function App() {
   return (
