@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import '../../styles/Process.css';
+import React, { useState, useEffect, useRef } from 'react';import '../../styles/Process.css';
 
 const Process = () => {
   const [selectedProcess, setSelectedProcess] = useState('Job Apply');
-
+const pathRef=useRef(null)
   const handleClick = () => {
     const processNames = ['Job Apply', 'Review', 'Selection', 'Interview', 'Selection-End'];
     const currentIndex = processNames.indexOf(selectedProcess);
@@ -11,6 +10,30 @@ const Process = () => {
     const nextProcess = processNames[nextIndex];
     setSelectedProcess(nextProcess);
   };
+
+  useEffect(() => {
+    const animate = () => {
+      const path = pathRef.current;
+      if (selectedProcess === 'Job Apply') {
+        path.setAttribute('d', "M150,100 H300");
+      }
+      else if (selectedProcess === 'Review') {
+        path.setAttribute('d', "M150,100 H800 C900,100 875,175 875,175");
+      }
+      else if (selectedProcess === 'Selection') {
+        path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H500");
+      }
+      else if (selectedProcess === 'Interview') {
+        path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400");
+      }
+      else if (selectedProcess === 'Selection-End') {
+        path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400 H800");
+      }
+    };
+    animate();
+
+  }, [selectedProcess]);
+
 
   const getProcessData = (processName) => {
     // You can retrieve the data based on the selected process here
@@ -36,9 +59,11 @@ const Process = () => {
         </div>
       </div>
       <div className='process-shape'>
-        <svg width='100%' height='500'>
-          <path
-            d="M70,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400 H900"
+        <svg width='100%' height='500' >
+        <path
+            
+            ref={pathRef}
+            d="M150,100 H300"
             fill="none"
             stroke="black"
             strokeWidth="2"
