@@ -45,7 +45,6 @@
 .about-process div label,
 article {
     font-size: 1.75em;
-
 }
 
 .about-process div p {
@@ -59,3 +58,21 @@ article {
 .process-shape circle.selected {
     fill: red;
 }
+
+.process-shape circle.selected {
+    fill: red;
+}
+
+.active {
+    font-size: 1.5em;
+}
+
+/* .process {
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    transition: stroke-dashoffset 4s linear;
+}
+
+.process:active {
+    stroke-dashoffset: 0;
+} */
