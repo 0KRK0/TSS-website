@@ -12,4 +12,6 @@
 
 .policy {
   background-color: #f6f4ef;
+  border: 1px solid #212121;
+  padding: 1em 0;
 }

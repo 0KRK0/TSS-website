@@ -1,0 +1,252 @@
+/*-------------css-----------------*/
+
+.img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo {
+    width: 250px;
+    height: 150px;
+}
+
+.about {
+    background-color: #f6f4ef;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 65px auto;
+}
+
+
+
+.container-a .reveal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 80x auto;
+    min-height: 200vh;
+    padding: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.stalwart-content {
+    flex: 1;
+    width: auto;
+    margin: 3em;
+    animation: fadeInUp 2s ease;
+}
+
+.stalwart-content h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.stalwart-content p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+
+}
+
+.stalwart-content button {
+    display: inline-block;
+    background-color: #6ff055;
+    color: #222;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.stalwart-content button:hover {
+    background-color: #27c419;
+    transform: scale(1.1);
+}
+
+.stalwart-image {
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+
+.stl-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .heading h1 {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+
+    .stalwart {
+        margin: 0px;
+    }
+
+    .container-a {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+
+    .stalwart-content {
+        width: 100%;
+        margin: 35px 0px;
+    }
+
+    .stalwart-content h2 {
+        font-size: 30px;
+    }
+
+    .stalwart-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .stalwart-content button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .stalwart-image {
+        width: 100%;
+    }
+
+    section h2 {
+        font-size: 40px;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.h {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+.header h1 {
+    color: #1f241e;
+    font-size: 55px;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0;
+    animation: fadeIn 8s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+section {
+    min-height: 50vh;
+}
+
+.section1 {
+
+    margin: 0px;
+    background: #fcf3e5;
+}
+
+.section2 {
+
+    margin: 0px;
+    background: #f6f4ef;
+}
+
+.section3 {
+
+    margin: 0px;
+    background: #fcf3e5;
+}
+
+
+.section4 {
+
+    margin: 0px;
+    background: #f6f4ef;
+}
+
+.section5 {
+
+    margin: 0px;
+    background: #fcf3e5;
+}
+
+.section6 {
+
+    margin: 0px;
+}
+
+
+section h2 {
+    font-size: 40px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}

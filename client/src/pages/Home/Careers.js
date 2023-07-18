@@ -35,7 +35,7 @@ const Careers = () => {
   };
 
   return (
-    <div className='career-part'>
+    <div className='career-part' id='careers'>
       <h3>Careers</h3>
       <div className='career-id' onMouseLeave={regainDefault}>
         <div className={`c ${selectedCareer === 'Front-end Development' ? 'expanded' : ''}`}>

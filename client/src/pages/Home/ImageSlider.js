@@ -61,7 +61,7 @@ const ImageSlider = ({ images }) => {
   }, [isPaused, startTimer]);
 
   return (
-    <div className="image-slider">
+    <div className="image-slider" id='carousel'>
       <div className="slide">
         <div className='slide-overlay'></div>
         <img className='prev-image' onClick={togglePause} src={images[(currentIndex + images.length - 1) % images.length]} alt={`Slide ${currentIndex - 1}`} />

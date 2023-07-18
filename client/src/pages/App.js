@@ -1,25 +1,28 @@
 import '../styles/App.css';
+import { Routes, Route } from 'react-router-dom';
 import Footer from './Home/Footer';
 import Header from './Home/Header';
-import Carousel from './Home/Carousel';
-import Careers from './Home/Careers';
-import Service from './Home/Services';
-import Process from './Home/Process';
-import Partners from './Home/Partners';
 import Policy from './Policy/policies'
+import Home from './Home/Home';
+import About from './About/About';
+import NotFound from './Home/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Carousel />
-      <Partners />
-      <Careers />
-      <Process />
-      {/* <Policy /> */}
-      <Service />
+    <>
+      <Routes>
+
+        <Route path='/' element={<Header />}>
+
+          <Route index element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='policies' element={<Policy />} />
+
+          <Route path='*' element={<NotFound />} />
+        </Route>
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
