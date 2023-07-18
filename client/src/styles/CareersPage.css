@@ -1,0 +1,51 @@
+.container-c {
+    font-family: "Poppins", sans-serif;
+    background-color: #f6f4ef;
+    padding: 3%;
+    min-height: 100vh;
+}
+
+.container-c a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.job_card {
+    padding: 0.5em;
+    cursor: pointer;
+    display: flex;
+    border-radius: 1em;
+    margin-top: 1em;
+    background: #ffffff;
+    justify-content: space-between;
+    border: 2px solid rgb(190, 190, 190);
+    transition: transform 0.3s ease;
+    transition: border 0.3s;
+}
+
+.job_card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.job_details {
+    display: flex;
+}
+
+.job_details .text {
+    margin-left: 2.3rem;
+}
+
+.job_details .text span {
+    color: rgb(116, 112, 112);
+}
+
+.job_salary {
+    text-align: right;
+    color: rgb(54, 54, 54);
+}
+
+.job_card:active {
+    border: 2px solid #395a13;
+
+}

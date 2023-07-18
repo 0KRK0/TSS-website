@@ -6,6 +6,7 @@ import Policy from './Policy/policies'
 import Home from './Home/Home';
 import About from './About/About';
 import NotFound from './Home/NotFound';
+import Careers from './Careers/Careers';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='policies' element={<Policy />} />
+          <Route path='careers' element={<Careers />} />
 
           <Route path='*' element={<NotFound />} />
         </Route>

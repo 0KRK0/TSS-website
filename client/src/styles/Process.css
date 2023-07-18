@@ -12,7 +12,11 @@
     width: 35%;
     display: flex;
     flex-direction: column;
+    transition: transform 0.6s ease;
+}
 
+.about-process:hover {
+    transform: scale(1.1);
 }
 
 .about-process h3 {

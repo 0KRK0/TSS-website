@@ -20,13 +20,10 @@
 } */
 
 .scroller {
-    padding-top: 30px;
-    height: 130px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: auto;
-
     white-space: nowrap;
 }
 
@@ -34,29 +31,16 @@
     animation: scroll 20s linear infinite;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 2em 0;
 }
 
 .scroller .scroll {
-    height: 100px;
+    height: 6em;
     width: min-content;
 }
 
-#1point1 {
-    height: 100px;
-    width: 130px;
-}
-
-#quess {
-    height: 100px;
-    width: 400px;
-}
-
-#virtusa {
-    height: 100px;
-    width: 120px;
-}
-
-#wipro {
-    height: 100px;
-    width: 200px;
+.partner {
+    height: 100%;
+    object-fit: contain;
 }
