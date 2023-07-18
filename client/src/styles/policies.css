@@ -1,0 +1,15 @@
+.head {
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.pts {
+  padding-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+.policy {
+  background-color: #f6f4ef;
+}

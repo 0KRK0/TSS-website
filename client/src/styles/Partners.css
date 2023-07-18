@@ -1,9 +1,15 @@
 .body {
-    align-items: center;
-    justify-content: center;
+    padding: 1em 0;
+    background-color: #f4f6ef;
 }
 
-@keyframes scroll {
+#partners {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+/* @keyframes scroll {
     0% {
         transform: translateX(0);
     }
@@ -11,7 +17,7 @@
     100% {
         transform: translateX(calc(-250px*3));
     }
-}
+} */
 
 .scroller {
     padding-top: 30px;
@@ -20,15 +26,14 @@
     overflow: hidden;
     position: relative;
     width: auto;
-    background-color: #f4f6ef;
+
     white-space: nowrap;
 }
 
 .scroller .scroll-track {
     animation: scroll 20s linear infinite;
     display: flex;
-    /* justify-content: space-evenly; */
-    width: calc(250px*6);
+    justify-content: space-evenly;
 }
 
 .scroller .scroll {

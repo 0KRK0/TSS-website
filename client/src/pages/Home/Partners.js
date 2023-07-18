@@ -3,6 +3,7 @@ import '../../styles/Partners.css'
 const Partners = () => {
     return (
         <div className='body'>
+            <h2 id='partners'>Partners</h2>
             <div className="scroller">
                 <div className="scroll-track">
                     <div className="scroll">

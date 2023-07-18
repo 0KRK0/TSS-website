@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';import '../../styles/Process.css';
+import React, { useState, useEffect, useRef } from 'react';
+import '../../styles/Process.css';
 
 const Process = () => {
   const [selectedProcess, setSelectedProcess] = useState('Job Apply');
-const pathRef=useRef(null)
+  const pathRef = useRef(null);
+
   const handleClick = () => {
     const processNames = ['Job Apply', 'Review', 'Selection', 'Interview', 'Selection-End'];
     const currentIndex = processNames.indexOf(selectedProcess);
@@ -18,13 +20,13 @@ const pathRef=useRef(null)
         path.setAttribute('d', "M150,100 H300");
       }
       else if (selectedProcess === 'Review') {
-        path.setAttribute('d', "M150,100 H800 C900,100 875,175 875,175");
+        path.setAttribute('d', "M150,100 H800 C900,100 875,200 875,175");
       }
       else if (selectedProcess === 'Selection') {
         path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H500");
       }
       else if (selectedProcess === 'Interview') {
-        path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400");
+        path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H150 C50,250 75,350 75,325");
       }
       else if (selectedProcess === 'Selection-End') {
         path.setAttribute('d', "M150,100 H800 C900,100 900,250 800,250 H150 C50,250 50,400 150,400 H800");
@@ -33,7 +35,6 @@ const pathRef=useRef(null)
     animate();
 
   }, [selectedProcess]);
-
 
   const getProcessData = (processName) => {
     // You can retrieve the data based on the selected process here
@@ -58,64 +59,73 @@ const pathRef=useRef(null)
           <p>{getProcessData(selectedProcess)}</p>
         </div>
       </div>
-      <div className='process-shape'>
-        <svg width='100%' height='500' >
-        <path
-            
+      <div className="process-shape">
+        <svg width="100%" height="500">
+          <path
             ref={pathRef}
             d="M150,100 H300"
             fill="none"
             stroke="black"
             strokeWidth="2"
           />
-          <g>
-            <text x="300" y="85" textAnchor="middle">Job Apply</text>
+          <g className="g1">
+            <text x="300" y="85" textAnchor="middle" className={selectedProcess === 'Job Apply' ? 'active' : ''}>
+              Job Apply
+            </text>
             <circle
               cx="300"
               cy="100"
               r={selectedProcess === 'Job Apply' ? '10' : '8'}
               fill={selectedProcess === 'Job Apply' ? 'red' : 'skyblue'}
-              onClick={() => setSelectedProcess('Job Apply')}
+              onClick={() => { setSelectedProcess('Job Apply') }}
             />
           </g>
-          <g>
-            <text x="875" y="160" textAnchor="middle">Review</text>
+          <g className="g2">
+            <text x="875" y="160" textAnchor="middle" className={selectedProcess === 'Review' ? 'active' : ''}>
+              Review
+            </text>
             <circle
               cx="875"
               cy="175"
               r={selectedProcess === 'Review' ? '10' : '8'}
               fill={selectedProcess === 'Review' ? 'red' : 'skyblue'}
-              onClick={() => setSelectedProcess('Review')}
+              onClick={() => { setSelectedProcess('Review') }}
             />
           </g>
-          <g>
-            <text x="500" y="235" textAnchor="middle">Selection</text>
+          <g className="g3">
+            <text x="500" y="235" textAnchor="middle" className={selectedProcess === 'Selection' ? 'active' : ''}>
+              Selection
+            </text>
             <circle
               cx="500"
               cy="250"
               r={selectedProcess === 'Selection' ? '10' : '8'}
               fill={selectedProcess === 'Selection' ? 'red' : 'skyblue'}
-              onClick={() => setSelectedProcess('Selection')}
+              onClick={() => { setSelectedProcess('Selection') }}
             />
           </g>
-          <g>
-            <text x="75" y="310" textAnchor="middle">Interview</text>
+          <g className="g4">
+            <text x="75" y="310" textAnchor="middle" className={selectedProcess === 'Interview' ? 'active' : ''}>
+              Interview
+            </text>
             <circle
               cx="75"
               cy="325"
               r={selectedProcess === 'Interview' ? '10' : '8'}
               fill={selectedProcess === 'Interview' ? 'red' : 'skyblue'}
-              onClick={() => setSelectedProcess('Interview')}
+              onClick={() => { setSelectedProcess('Interview') }}
             />
           </g>
-          <g>
-            <text x="800" y="385" textAnchor="middle">Selection-End</text>
+          <g className="g5">
+            <text x="800" y="385" textAnchor="middle" className={selectedProcess === 'Selection-End' ? 'active' : ''}>
+              Selection-End
+            </text>
             <circle
               cx="800"
               cy="400"
               r={selectedProcess === 'Selection-End' ? '10' : '8'}
               fill={selectedProcess === 'Selection-End' ? 'red' : 'skyblue'}
-              onClick={() => setSelectedProcess('Selection-End')}
+              onClick={() => { setSelectedProcess('Selection-End') }}
             />
           </g>
         </svg>
