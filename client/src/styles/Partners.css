@@ -1,0 +1,46 @@
+.body {
+    padding: 1em 0;
+    background-color: #f4f6ef;
+}
+
+#partners {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+}
+
+/* @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px*3));
+    }
+} */
+
+.scroller {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+}
+
+.scroller .scroll-track {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.scroller .scroll {
+    height: 6em;
+    width: min-content;
+}
+
+.partner {
+    height: 100%;
+    object-fit: contain;
+}
