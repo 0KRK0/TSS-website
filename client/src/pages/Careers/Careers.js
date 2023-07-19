@@ -1,11 +1,35 @@
 import React from 'react';
-import '../../styles/CareersPage.css'; // Import the external CSS file
+import { useEffect, useState } from 'react';
+import '../../styles/CareersPage.css';
+import axios from 'axios';
 
 function JobDashboard() {
+
+    const [careers, setCareers] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3500/careers').then((response) => {
+            setCareers(response.data);
+        });
+    }, []);
+
     return (
         <div className="container-c">
 
-            <a href='https://www.linkedin.com/feed/update/urn:li:activity:7086982334616408064'>
+            {careers.map(career => (
+                <a href={career.link}>
+                    <div className="job_card">
+                        <div className="job_details">
+                            <div className="text">
+                                <h2>{career.role}</h2>
+                                <span>{career.companyName}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            ))}
+
+            {/* <a href='https://www.linkedin.com/feed/update/urn:li:activity:7086982334616408064'>
                 <div className="job_card">
                     <div className="job_details">
                         <div className="text">
@@ -18,59 +42,8 @@ function JobDashboard() {
                         <span>1 days ago</span>
                     </div>
                 </div>
-            </a>
+            </a> */}
 
-            <div className="job_card">
-                <div className="job_details">
-                    <div className="text">
-                        <h2>JavaScript Developer</h2>
-                        <span>Google - Senior Post</span>
-                    </div>
-                </div>
-                <div className="job_salary">
-                    <h4>$8.7 - $13.2k /yr</h4>
-                    <span>2 days ago</span>
-                </div>
-            </div>
-
-            <div className="job_card">
-                <div className="job_details">
-                    <div className="text">
-                        <h2>Product Developer</h2>
-                        <span>Facebook - Manager Post</span>
-                    </div>
-                </div>
-                <div className="job_salary">
-                    <h4>$11 - $18.5k /yr</h4>
-                    <span>2 days ago</span>
-                </div>
-            </div>
-
-            <div className="job_card">
-                <div className="job_details">
-                    <div className="text">
-                        <h2>Programmer</h2>
-                        <span>Github - Junior Post</span>
-                    </div>
-                </div>
-                <div className="job_salary">
-                    <h4>$6 - $11.5k /yr</h4>
-                    <span>3 days ago</span>
-                </div>
-            </div>
-
-            <div className="job_card">
-                <div className="job_details">
-                    <div className="text">
-                        <h2>React.js Expert</h2>
-                        <span>Youtube - VIP</span>
-                    </div>
-                </div>
-                <div className="job_salary">
-                    <h4>$6 - $11.5k /yr</h4>
-                    <span>3 days ago</span>
-                </div>
-            </div>
         </div>
     );
 }
