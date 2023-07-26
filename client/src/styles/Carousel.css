@@ -33,7 +33,8 @@
   object-fit: cover;
   transition: transform 0.2s ease-out;
 }
-.image-text{
+
+.image-text {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -41,7 +42,8 @@
   width: 50%;
   top: 10%;
 }
-.image-text h3{
+
+.image-text h3 {
   font-size: 35px;
 }
 
@@ -96,40 +98,63 @@
 .pause-button:hover {
   opacity: 0.4;
 }
-.image-text p{
+
+.image-text p {
   display: none;
   font-weight: 600;
-
 }
+
+.image-text button {
+  display: none;
+}
+
+.image-text:hover button {
+  display: block;
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  font-weight: 700;
+  transform: scale(1.1);
+}
+
+.slide .current-image:hover+.image-text button {
+  display: block;
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+}
+
 .slide .current-image:hover+.image-text p {
   display: block;
 }
-.slide .current-image:hover{
+
+.slide .current-image:hover {
   opacity: 0.35;
   color: rgba(0, 0, 0, 0.2);
 }
 
-.image-text:hover p{
+.image-text:hover p {
   display: block;
 }
-  .slide>.image-text:hover + .current-image {
-    margin: 0 5%;
-    transform: scale(1.15);
-    height: 95vh;
-    width: 100%;
-    box-shadow: 0 20px 200px rgba(0, 0, 0, 1);
-    opacity: 0.35;
-    color: rgba(0, 0, 0, 0.2);
-  }
-.image-text h3{
+
+.current-image:has(+ .image-text:hover) {
+  margin: 0 5%;
+  transform: scale(1.15);
+  height: 95vh;
+  width: 100%;
+  opacity: 0.35;
+  box-shadow: 0 20px 200px rgba(0, 0, 0, 1);
+}
+
+.image-text h3 {
   color: black;
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media (min-width:501px) {
 
-  .slide .current-image:hover  {
+  .slide .current-image:hover {
     margin: 0 5%;
     transform: scale(1.15);
     height: 95vh;
@@ -150,9 +175,18 @@
     overflow: hidden;
     background-color: #f6f4ef;
   }
-  .image-text p{
+
+  .image-text p {
     display: block;
-  
+  }
+
+  .image-text button {
+    display: block;
+    text-decoration: none;
+    all: unset;
+    cursor: pointer;
+    font-weight: 700;
+    transform: scale(1.1);
   }
 
 
