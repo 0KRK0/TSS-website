@@ -5,6 +5,9 @@
 
 .career-part h3 {
   margin-left: 1em;
+  color: #395a13;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .career-id {
@@ -109,4 +112,41 @@
 
 button>svg {
   transform: scale(1.3)
+}
+
+@media (max-width:500px) {
+  .career-id {
+    display: flex;
+  }
+
+  .c {
+    position: relative;
+    /* ative positioning to the .c elements */
+    color: white;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    background-color: black;
+    margin: 0 0.5em;
+    transition: width 0.3s ease, transform 0.3s;
+  }
+
+  .c:hover {
+
+    width: 2000px;
+    transform: translateY(40px);
+
+  }
+
+  .expanded {
+    width: 500px;
+  }
+
+  .c>button {
+    display: none;
+  }
+
+  .c:hover>button {
+    display: block;
+  }
 }

@@ -65,7 +65,7 @@ const Process = () => {
             ref={pathRef}
             d="M150,100 H300"
             fill="none"
-            stroke="black"
+            stroke="#395a13"
             strokeWidth="2"
           />
           <g className="g1">
@@ -76,7 +76,7 @@ const Process = () => {
               cx="300"
               cy="100"
               r={selectedProcess === 'Job Apply' ? '10' : '8'}
-              fill={selectedProcess === 'Job Apply' ? 'red' : 'skyblue'}
+              fill={selectedProcess === 'Job Apply' ? 'lightgreen' : 'skyblue'}
               onClick={() => { setSelectedProcess('Job Apply') }}
             />
           </g>
@@ -88,7 +88,7 @@ const Process = () => {
               cx="875"
               cy="175"
               r={selectedProcess === 'Review' ? '10' : '8'}
-              fill={selectedProcess === 'Review' ? 'red' : 'skyblue'}
+              fill={selectedProcess === 'Review' ? 'lightgreen' : 'skyblue'}
               onClick={() => { setSelectedProcess('Review') }}
             />
           </g>
@@ -100,7 +100,7 @@ const Process = () => {
               cx="500"
               cy="250"
               r={selectedProcess === 'Selection' ? '10' : '8'}
-              fill={selectedProcess === 'Selection' ? 'red' : 'skyblue'}
+              fill={selectedProcess === 'Selection' ? 'lightgreen' : 'skyblue'}
               onClick={() => { setSelectedProcess('Selection') }}
             />
           </g>
@@ -112,19 +112,19 @@ const Process = () => {
               cx="75"
               cy="325"
               r={selectedProcess === 'Interview' ? '10' : '8'}
-              fill={selectedProcess === 'Interview' ? 'red' : 'skyblue'}
+              fill={selectedProcess === 'Interview' ? 'lightgreen' : 'skyblue'}
               onClick={() => { setSelectedProcess('Interview') }}
             />
           </g>
           <g className="g5">
-            <text x="800" y="385" textAnchor="middle" className={selectedProcess === 'Selection-End' ? 'active' : ''}>
+            <text x="800" y="385" color='#395a13' textAnchor="middle" className={selectedProcess === 'Selection-End' ? 'active' : ''}>
               Selection-End
             </text>
             <circle
               cx="800"
               cy="400"
               r={selectedProcess === 'Selection-End' ? '10' : '8'}
-              fill={selectedProcess === 'Selection-End' ? 'red' : 'skyblue'}
+              fill={selectedProcess === 'Selection-End' ? 'lightgreen' : 'skyblue'}
               onClick={() => { setSelectedProcess('Selection-End') }}
             />
           </g>
