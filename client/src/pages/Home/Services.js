@@ -4,7 +4,7 @@ const Service = () => {
     return (
         <div className="services-section" id='services'>
             <div className="inner-width">
-                <h1 className="section-title">Our Services</h1>
+                <h1 className="section-title-head">Our Services</h1>
                 <div className="border"></div>
                 <div className="services-container">
                     <div className="service-box">

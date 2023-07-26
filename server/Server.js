@@ -21,13 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
-
-app.get('/careers', async (req, res, next) => {
+app.get('/career', async (req, res, next) => {
     try {
         const foundCareers = await Career.find({}).exec();
 
@@ -36,6 +32,10 @@ app.get('/careers', async (req, res, next) => {
     catch (err) {
         next(err);
     }
+})
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 })
 
 app.post('/news', async (req, res, next) => {
@@ -48,6 +48,11 @@ app.post('/news', async (req, res, next) => {
     if (!validMail) return res.status(400).json({ 'message': 'invalid mail' });
 
     try {
+
+        const foundMail = await Mail.find({ mail }).exec();
+
+        if (foundMail) return res.status(400).json({ 'message': 'Mail already exists' });
+
         const query = await Mail.create({
             mail
         });
