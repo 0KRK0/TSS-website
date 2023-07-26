@@ -112,6 +112,15 @@
 .image-text:hover p{
   display: block;
 }
+  .slide>.image-text:hover + .current-image {
+    margin: 0 5%;
+    transform: scale(1.15);
+    height: 95vh;
+    width: 100%;
+    box-shadow: 0 20px 200px rgba(0, 0, 0, 1);
+    opacity: 0.35;
+    color: rgba(0, 0, 0, 0.2);
+  }
 .image-text h3{
   color: black;
     font-weight: 900;
