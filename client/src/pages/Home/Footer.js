@@ -120,13 +120,13 @@ const Footer = () => {
             </div>
             <div className="copyright-area">
                 <div className="container">
-                    <div className="row">
+                    <div id='column' className="row">
                         <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                             <div className="copyright-text">
                                 <p>Copyright &copy; 2023, All Right Reserved </p>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 d-none d-lg-block text-left">
+                        <div className="col-xl-6 col-lg-6  text-center">
                             <div className="footer-menu">
                                 <ul>
                                     <li><HashLink className='link' smooth to='/policies'>Terms & policies</HashLink></li>

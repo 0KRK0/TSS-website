@@ -55,7 +55,7 @@ const Header = () => {
           <span />
           <ul id="contactUs">
             <li><Link className='link' to='/'>Collab</Link></li>
-            <li><Link className='link' to='careers'>Get Hired!</Link></li>
+            <li><Link className='link' to='/careers'>Get Hired!</Link></li>
             <li><HashLink className='link' smooth to='/#footer'>Contact Us</HashLink></li>
           </ul>
         </nav>

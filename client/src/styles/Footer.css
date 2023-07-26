@@ -191,3 +191,12 @@ ul {
 .green {
   color: #395a13;
 }
+.d-none{
+  display: important;
+}
+@media(max-width:500px){
+  #column{
+    display: flex;
+    flex-direction: column;
+  }
+}
