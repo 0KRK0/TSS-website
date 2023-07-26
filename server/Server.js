@@ -15,17 +15,13 @@ connectDB();
 
 app.use(credentials);
 
-app.use(cors())
+app.use(cors(corsOptions))
 
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-})
 
 app.get('/careers', async (req, res, next) => {
     try {
@@ -36,6 +32,10 @@ app.get('/careers', async (req, res, next) => {
     catch (err) {
         next(err);
     }
+})
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 })
 
 app.post('/news', async (req, res, next) => {
