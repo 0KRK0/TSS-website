@@ -59,6 +59,41 @@ const ImageSlider = ({ images }) => {
       clearInterval(timer);
     };
   }, [isPaused, startTimer]);
+  const getCurrentImageText = () => {
+    switch (currentIndex) {
+      case 1:
+        return {
+          title: 'Services',
+          description: 'Innovation on Display: Our Array of Services',
+          link:''
+        };
+      case 0:
+        return {
+          title: 'About Us',
+          description: 'we specialize in identifying, recruiting, and onboarding top-notch professionals who possess the skills, knowledge, and experience to drive your business forward.'
+        };
+      case 2:
+        return {
+          title: 'Get Hired',
+          description: 'Getting hired is not just about qualification  it is about showcasing your unique value and how you can make a difference.Get started with our wide range of career options'
+        };
+      case 3:
+        return {
+          title: 'Collab',
+          description: 'Collaboration is the key that unlocks the door to success. Together, we achieve more than we ever could alone'
+        };
+      case 4:
+        return {
+          title: 'Careers',
+          description: 'Explore other exciting opportunities and positions in our organization.'
+        };
+      default:
+        return {
+          title: '',
+          description: ''
+        };
+    }
+  };
 
   return (
     <div className="image-slider" id='carousel'>
@@ -66,6 +101,10 @@ const ImageSlider = ({ images }) => {
         <div className='slide-overlay'></div>
         <img className='prev-image' onClick={togglePause} src={images[(currentIndex + images.length - 1) % images.length]} alt={`Slide ${currentIndex - 1}`} />
         <img className="current-image" onClick={togglePause} src={images[currentIndex]} alt={`Slide ${currentIndex}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+        <div className="image-text" onClick={togglePause} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <h3>{getCurrentImageText().title}</h3>
+          <p>{getCurrentImageText().description}</p>
+        </div>
         <img className='next-image' onClick={togglePause} src={images[(currentIndex + 1) % images.length]} alt={`Slide ${currentIndex + 1}`} />
       </div>
       <button className="prev-button" onClick={handlePrevSlide} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

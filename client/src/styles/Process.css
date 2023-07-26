@@ -57,18 +57,14 @@ article {
 
 .process-shape circle {
     transition: fill 0.6s ease-in-out;
-}
-
-.process-shape circle.selected {
-    fill: red;
-}
-
-.process-shape circle.selected {
-    fill: red;
+    
 }
 
 .active {
     font-size: 1.5em;
+}
+.mobile-process{
+    display: none;
 }
 
 /* .process {
@@ -80,3 +76,43 @@ article {
 .process:active {
     stroke-dashoffset: 0;
 } */
+@media(max-width:1000px){
+    .process-shape{
+        display: none;
+    }
+    .mobile-process{
+        display: block;
+    }
+    .about-process {
+        width: 100%;
+        align-items: center;
+    }
+    .process{
+        padding-top: 30px;
+    }.about-process h3{
+        font-size: 25px;
+    }
+    .about-process div{
+        height: 300px;
+        width: 75%;
+        padding: 10px;
+    }
+    text{
+        font-size: 12.5px;
+    }
+    text.active{
+        font-size: 15.5px;
+    }
+    .mobile-process svg circle{
+        size: 10px;
+    }
+    .about-process div label,.about-process article {
+    font-size: 17.5px;
+    }
+    .about-process div p{
+        font-size: 15px;
+    }
+    .about-process h3{
+        font-size: 20px;
+    }
+}
