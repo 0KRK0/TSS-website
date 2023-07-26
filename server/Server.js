@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-app.get('/careers', async (req, res, next) => {
+app.get('/career', async (req, res, next) => {
     try {
         const foundCareers = await Career.find({}).exec();
 
