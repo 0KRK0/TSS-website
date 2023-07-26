@@ -8,7 +8,7 @@ function JobDashboard() {
     const [careers, setCareers] = useState([]);
 
     useEffect(() => {
-        axios.get('/careers').then((response) => {
+        axios.get('http://localhost:3500/careers').then((response) => {
             setCareers(response.data);
         });
     }, []);

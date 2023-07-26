@@ -17,7 +17,7 @@ const Footer = () => {
 
         if (!validMail) return alert('invalid mail');
 
-        axios.post('/news', { mail }).then((response) => {
+        axios.post('http://localhost:3500/news', { mail }).then((response) => {
             setRes(response.data);
         });
     }
